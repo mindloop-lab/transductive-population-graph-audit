@@ -1,0 +1,12 @@
+{
+  "no_samesite": {
+    "pooled_oof_auc": 0.4741,
+    "n_covered": 431,
+    "mean_train_size": 745.15
+  },
+  "budget_matched": {
+    "pooled_oof_auc": 0.9212,
+    "n_covered": 431,
+    "mean_train_size": 754.7
+  }
+}

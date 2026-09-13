@@ -1,0 +1,1 @@
+{"name":"Parisot-GCN-C","input_dim":64,"hidden_dim":16,"layers":1,"chebyshev_order":3,"dropout":0.3,"learned_edges":false,"residual":false,"layer_concat":false,"learning_rate":0.01,"weight_decay":0.0005,"max_epochs":120,"patience":25}

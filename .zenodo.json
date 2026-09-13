@@ -1,0 +1,48 @@
+{
+  "title": "Code and frozen results for: Deconfounding transductive population-graph learning in multisite fMRI - tracing high cohort accuracy to same-site supervision",
+  "description": "Reproducibility software and frozen analysis artifacts for the study \"Deconfounding transductive population-graph learning in multisite fMRI: tracing high cohort accuracy to same-site supervision\". Contains the deterministic harness, the frozen 10-fold split manifest, the result registry (the single numeric source for every reported value), per-subject out-of-fold predictions for all reported conditions including leave-one-site-out re-runs for two preprocessing pipelines, derived statistics, and the registry-schema and numeric audits. No primary imaging data are redistributed.",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Wan, Keliang"
+    },
+    {
+      "name": "Chen, Zongqing",
+      "orcid": "0000-0002-1668-5089"
+    },
+    {
+      "name": "Liu, Guixian"
+    },
+    {
+      "name": "Yu, Biantian"
+    },
+    {
+      "name": "Zhang, Qian"
+    },
+    {
+      "name": "Zhang, Fanghong",
+      "orcid": "0000-0003-0398-9902"
+    },
+    {
+      "name": "Zhong, Ning"
+    },
+    {
+      "name": "Kuai, Hongzhi"
+    }
+  ],
+  "keywords": [
+    "transductive learning",
+    "population graph neural network",
+    "site effects",
+    "deconfounding",
+    "multisite fMRI",
+    "ABIDE",
+    "reproducibility",
+    "neuroimaging"
+  ],
+  "license": {
+    "id": "Apache-2.0"
+  }
+}

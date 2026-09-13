@@ -1,0 +1,45 @@
+name: release-integrity
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: release-integrity-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate public tree hygiene
+        run: python scripts/validate_public_tree.py
+      - name: Run independent secret scan
+        run: bash scripts/scan_secrets.sh
+      - name: Validate result registry
+        run: python scripts/validate_registry.py
+      - name: Install evidence-validator dependencies
+        run: python -m pip install numpy scikit-learn
+      - name: Recompute registry values from their backing predictions
+        run: python scripts/validate_oof.py
+      - name: Rebuild the registry from the artifacts (round-trip)
+        run: python scripts/build_registry.py --check
+      - name: Verify frozen manifest
+        run: sha256sum -c MANIFEST.sha256
+
+  synthetic-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install smoke dependencies
+        run: python -m pip install -r environment/requirements-ci.txt
+      - name: Run synthetic end-to-end smoke test
+        run: bash run_smoke.sh

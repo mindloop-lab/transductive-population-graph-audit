@@ -1,0 +1,58 @@
+{
+  "registry_version": 1,
+  "status": "phase_minus1b_verified_abide1",
+  "dataset": "ABIDE-I",
+  "pipeline": "cpac",
+  "strategy": "filt_noglobal",
+  "cohort": {
+    "subjects": 871,
+    "asd": 403,
+    "td": 468,
+    "male": 727,
+    "female": 144,
+    "sites": 20
+  },
+  "paths": {
+    "raw_root": "<user-provided ABIDE-I PCP root>",
+    "subject_root": "<user-provided canonical subject cache root>",
+    "subject_ids": "<user-provided subject ID manifest>",
+    "phenotype": "<user-provided Phenotypic_V1_0b_preprocessed1.csv>",
+    "id_mapping": "<user-provided subject ID mapping>",
+    "matrix_hash_manifest": "<user-provided matrix SHA256 manifest>"
+  },
+  "sha256": {
+    "builder": "d50940d411e6350b32c4b6260b0e05d53a8e80b01261270612c57ce7153e1401",
+    "subject_ids": "7cb85ff412ed55532c04d6576dba04a8a7dd73206f351c0bf0aae09dc01a16a5",
+    "id_mapping": "e578366749b16586eb52a30e215d2706881c8c2cb5a4ac4072d5827fb26e20b9",
+    "cohort_manifest": "77769a79a8afec6ac0826de93a87754b8f215c0d793442886a019c963ea2149d",
+    "canonical_summary": "b4da9fab821a89a69b93403d0a2b01d88f261deb64c415666a1acee3976db0b5",
+    "phenotype": "009f01a89697113e5375ded4fbcff4c85e89a4daa6d13e63c21ae5d57dda0865",
+    "matrix_hash_manifest": "f2f0cfcc5da2d4e082316a5c83db17cbda07e855b466a5ccda276fb26835f78d"
+  },
+  "atlas_shapes": {
+    "aal": [
+      116,
+      116
+    ],
+    "cc200": [
+      200,
+      200
+    ],
+    "ho": [
+      111,
+      111
+    ]
+  },
+  "matrix_estimator": "StandardScaler then LedoitWolf covariance converted to correlation",
+  "id_rule": "Unpadded phenotype SUB_ID is used by legacy paths; PCP FILE_ID and zero-padded ID are retained in subject_id_mapping.csv.",
+  "special_id_mapping": {
+    "legacy_subject_id": "51461",
+    "pcp_zero_padded_id": "0051461"
+  },
+  "legacy_ho_equivalence": {
+    "subjects_compared": 871,
+    "unequal_at_tolerance_1e-12": 0,
+    "max_abs_difference": 2.3314683517128287e-15
+  },
+  "public_release_note": "ABIDE-II is not part of this v1.0 reproducibility artifact."
+}

@@ -1,0 +1,126 @@
+{
+  "model": "MAGP-hetero",
+  "pipeline": "C-PAC",
+  "seed": 666,
+  "score_definition": "softmax(z)[:,1] (equiv. z1-z0)",
+  "oof_file": "e1_out/transductive_controls/full_sex_site_s666_oof.npz",
+  "pooled_oof_auc": 0.9405,
+  "brier": 0.0978,
+  "ece_10bin_equalwidth": 0.0398,
+  "per_site": {
+    "CALTECH": {
+      "n": 15,
+      "n_asd": 5,
+      "auc": 1.0
+    },
+    "CMU": {
+      "n": 11,
+      "n_asd": 6,
+      "auc": 0.7333
+    },
+    "KKI": {
+      "n": 33,
+      "n_asd": 12,
+      "auc": 0.5675
+    },
+    "LEUVEN_1": {
+      "n": 28,
+      "n_asd": 14,
+      "auc": 0.5306
+    },
+    "LEUVEN_2": {
+      "n": 28,
+      "n_asd": 12,
+      "auc": 0.8021
+    },
+    "MAX_MUN": {
+      "n": 46,
+      "n_asd": 19,
+      "auc": 0.5361
+    },
+    "NYU": {
+      "n": 172,
+      "n_asd": 74,
+      "auc": 0.9964
+    },
+    "OHSU": {
+      "n": 25,
+      "n_asd": 12,
+      "auc": 0.9808
+    },
+    "OLIN": {
+      "n": 28,
+      "n_asd": 14,
+      "auc": 0.9184
+    },
+    "PITT": {
+      "n": 50,
+      "n_asd": 24,
+      "auc": 0.9391
+    },
+    "SBL": {
+      "n": 26,
+      "n_asd": 12,
+      "auc": 0.7857
+    },
+    "SDSU": {
+      "n": 27,
+      "n_asd": 8,
+      "auc": 0.9934
+    },
+    "STANFORD": {
+      "n": 25,
+      "n_asd": 12,
+      "auc": 0.9936
+    },
+    "TRINITY": {
+      "n": 44,
+      "n_asd": 19,
+      "auc": 1.0
+    },
+    "UCLA_1": {
+      "n": 64,
+      "n_asd": 37,
+      "auc": 0.973
+    },
+    "UCLA_2": {
+      "n": 21,
+      "n_asd": 11,
+      "auc": 0.9545
+    },
+    "UM_1": {
+      "n": 86,
+      "n_asd": 34,
+      "auc": 0.9904
+    },
+    "UM_2": {
+      "n": 34,
+      "n_asd": 13,
+      "auc": 0.8901
+    },
+    "USM": {
+      "n": 67,
+      "n_asd": 43,
+      "auc": 0.9816
+    },
+    "YALE": {
+      "n": 41,
+      "n_asd": 22,
+      "auc": 0.9809
+    }
+  },
+  "by_sex": {
+    "male": {
+      "n": 727,
+      "n_asd": 349,
+      "auc": 0.9414,
+      "brier": 0.0969
+    },
+    "female": {
+      "n": 144,
+      "n_asd": 54,
+      "auc": 0.9315,
+      "brier": 0.1023
+    }
+  }
+}

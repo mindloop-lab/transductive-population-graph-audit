@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this software release and the accompanying article."
+title: "Deconfounding transductive population-graph learning in multisite fMRI"
+type: software
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/mindloop-lab/transductive-population-graph-audit"
+abstract: >
+  Reproducibility software and frozen analysis artifacts for the study
+  "Deconfounding transductive population-graph learning in multisite fMRI:
+  tracing high cohort accuracy to same-site supervision."
+keywords:
+  - transductive learning
+  - population graph neural network
+  - site effects
+  - multisite fMRI
+  - ABIDE
+  - reproducibility
+authors:
+  - family-names: Wan
+    given-names: Keliang
+  - family-names: Chen
+    given-names: Zongqing
+    orcid: "https://orcid.org/0000-0002-1668-5089"
+  - family-names: Liu
+    given-names: Guixian
+  - family-names: Yu
+    given-names: Biantian
+  - family-names: Zhang
+    given-names: Qian
+  - family-names: Zhang
+    given-names: Fanghong
+    orcid: "https://orcid.org/0000-0003-0398-9902"
+  - family-names: Zhong
+    given-names: Ning
+  - family-names: Kuai
+    given-names: Hongzhi

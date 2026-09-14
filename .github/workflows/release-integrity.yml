@@ -21,6 +21,8 @@ jobs:
         run: python scripts/validate_public_tree.py
       - name: Run independent secret scan
         run: bash scripts/scan_secrets.sh
+      - name: Validate release metadata
+        run: python scripts/validate_metadata.py
       - name: Validate result registry
         run: python scripts/validate_registry.py
       - name: Install evidence-validator dependencies

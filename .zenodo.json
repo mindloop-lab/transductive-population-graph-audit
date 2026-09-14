@@ -1,6 +1,6 @@
 {
   "title": "Code and frozen results for: Deconfounding transductive population-graph learning in multisite fMRI - tracing high cohort accuracy to same-site supervision",
-  "description": "Reproducibility software and frozen analysis artifacts for the study \"Deconfounding transductive population-graph learning in multisite fMRI: tracing high cohort accuracy to same-site supervision\". Contains the deterministic harness, the frozen 10-fold split manifest, the result registry (the single numeric source for every reported value), per-subject out-of-fold predictions for all reported conditions including leave-one-site-out re-runs for two preprocessing pipelines, derived statistics, and the registry-schema and numeric audits. No primary imaging data are redistributed.",
+  "description": "Reproducibility software and frozen analysis artifacts for the study \"Deconfounding transductive population-graph learning in multisite fMRI: tracing high cohort accuracy to same-site supervision\". The release includes the deterministic evaluation harness, recovered per-seed outer-fold generation partitions, the reconstructed mean-fold aggregation reference, the frozen result registry, redistributed out-of-fold and leave-one-site-out prediction artifacts for release-backed conditions, derived statistics, and registry/provenance validation tools. Historical scalar rows without redistributed backing predictions are explicitly identified in the registry. No primary imaging data are redistributed.",
   "upload_type": "software",
   "version": "1.0.0",
   "access_right": "open",
@@ -42,7 +42,5 @@
     "reproducibility",
     "neuroimaging"
   ],
-  "license": {
-    "id": "Apache-2.0"
-  }
+  "license": "Apache-2.0"
 }

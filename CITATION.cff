@@ -5,6 +5,11 @@ type: software
 version: 1.0.0
 license: Apache-2.0
 repository-code: "https://github.com/mindloop-lab/transductive-population-graph-audit"
+doi: \"10.5281/zenodo.22748744\"
+identifiers:
+  - type: doi
+    value: \"10.5281/zenodo.22748744\"
+    description: "Archived release v1.0.0"
 abstract: >
   Reproducibility software and frozen analysis artifacts for the study
   "Deconfounding transductive population-graph learning in multisite fMRI:

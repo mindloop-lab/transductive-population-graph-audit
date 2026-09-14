@@ -80,8 +80,6 @@ only derived predictions, frozen splits and statistics are included. See `docs/D
 ## Citation and licence
 
 `CITATION.cff` describes the software artifact, released under **Apache License 2.0**
-(`Apache-2.0`). The public release is built from the audited tree as a clean root; GitHub
-Release `v1.0.0` will be archived with Zenodo and the DOI added to the citation metadata
-and the article.
+(`Apache-2.0`). The public release is built from the audited tree as a clean root; GitHub Release `v1.0.0` is archived at Zenodo: **[10.5281/zenodo.22748744](https://doi.org/10.5281/zenodo.22748744)**.
 
 This repository is a reproducibility artifact, not a manuscript archive.

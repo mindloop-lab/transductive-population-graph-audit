@@ -2,8 +2,7 @@
 
 Reproducibility code and frozen results for:
 
-> **Deconfounding transductive population-graph learning in multisite fMRI:**
-> **tracing high cohort accuracy to same-site supervision**
+> **Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI**
 
 The study audits a **cohort-visible transductive** evaluation regime: test-subject
 nodes, imaging features and permitted phenotype/context relations may be present in the

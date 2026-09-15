@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite this software release and the accompanying article."
-title: "Deconfounding transductive population-graph learning in multisite fMRI"
+title: "Code and frozen results for: Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI"
 type: software
 version: 1.0.0
 license: Apache-2.0
@@ -12,8 +12,7 @@ identifiers:
     description: "Archived release v1.0.0"
 abstract: >
   Reproducibility software and frozen analysis artifacts for the study
-  "Deconfounding transductive population-graph learning in multisite fMRI:
-  tracing high cohort accuracy to same-site supervision."
+  "Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI."
 keywords:
   - transductive learning
   - population graph neural network

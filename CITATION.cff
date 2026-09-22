@@ -9,7 +9,10 @@ doi: "10.5281/zenodo.22892320"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22892320"
-    description: "Archived release v1.1.0"
+    description: "Version DOI reserved for release v1.1.0 (registered when that release is published)"
+  - type: doi
+    value: "10.64898/2026.09.15.751719"
+    description: "bioRxiv preprint of the accompanying manuscript (previous title), posted 2026-09-21"
   - type: doi
     value: "10.5281/zenodo.22748744"
     description: "Archived release v1.0.0"

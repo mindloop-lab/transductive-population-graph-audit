@@ -50,6 +50,18 @@
       "relation": "isVersionOf",
       "identifier": "10.5281/zenodo.22748743",
       "scheme": "doi"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/mindloop-lab/transductive-population-graph-audit/tree/v1.1.0",
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.64898/2026.09.15.751719",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
     }
   ]
 }

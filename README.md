@@ -82,6 +82,6 @@ only derived predictions, frozen splits and statistics are included. See `docs/D
 ## Citation and licence
 
 `CITATION.cff` describes the software artifact, released under **Apache License 2.0**
-(`Apache-2.0`). The public release is built from the audited tree as a clean root; GitHub Release `v1.0.0` is archived at Zenodo: **[10.5281/zenodo.22748744](https://doi.org/10.5281/zenodo.22748744)**; release `v1.1.0` is archived at **[10.5281/zenodo.22892320](https://doi.org/10.5281/zenodo.22892320)** (concept DOI **[10.5281/zenodo.22748743](https://doi.org/10.5281/zenodo.22748743)**).
+(`Apache-2.0`). The public release is built from the audited tree as a clean root; GitHub Release `v1.0.0` is archived at Zenodo: **[10.5281/zenodo.22748744](https://doi.org/10.5281/zenodo.22748744)**; release `v1.1.0` (version DOI **[10.5281/zenodo.22892320](https://doi.org/10.5281/zenodo.22892320)**, reserved and archived when that release is published; concept DOI **[10.5281/zenodo.22748743](https://doi.org/10.5281/zenodo.22748743)**). A previous version of the accompanying manuscript was posted as a bioRxiv preprint: **[10.64898/2026.09.15.751719](https://doi.org/10.64898/2026.09.15.751719)** (posted 2026-09-21) under the earlier title "Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI"; the current title is "Auditing Site-Dependent Performance in Transductive Population Graph Neural Networks for Multisite Autism fMRI".
 
 This repository is a reproducibility artifact, not a manuscript archive.

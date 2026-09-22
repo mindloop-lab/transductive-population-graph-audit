@@ -1,5 +1,10 @@
 # v1.1.0
 
+## Preprint
+
+* The accompanying manuscript was posted on bioRxiv as DOI **10.64898/2026.09.15.751719** (posted 2026-09-21, version 1, licence CC BY 4.0) under the earlier title "Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI". The v2 revision will be posted from this release after the Zenodo v1.1.0 record is
+published; the licence is unchanged.
+
 ## Title metadata
 
 Project title unified to: **Auditing Site-Dependent Performance in Transductive Population Graph Neural Networks for Multisite Autism fMRI** (README, `.zenodo.json`, `CITATION.cff`).

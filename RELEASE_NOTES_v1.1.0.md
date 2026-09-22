@@ -35,3 +35,9 @@ Project title unified to: **Auditing Site-Dependent Performance in Transductive 
 * ORCID iDs added for Ning Zhong (0000-0001-7882-8340) and Hongzhi Kuai (0000-0002-2746-648X) in
   `.zenodo.json`, `CITATION.cff` and the manuscript ORCID section; the existing ORCIDs for Zongqing
   Chen and Fanghong Zhang are retained. No ORCID value was invented for the other four authors.
+
+## Release integrity
+
+* `MANIFEST.sha256` now covers every tracked file except the manifest itself: the previously
+  omitted `scripts/validate_metadata.py` is listed with its exact SHA-256. A bidirectional gate
+  asserts that every tracked file appears exactly once and that no listed path is stale.

@@ -2,15 +2,18 @@
 
 Reproducibility code and frozen results for:
 
-> **Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI**
+> **Auditing Site-Dependent Performance in Transductive Population Graph Neural Networks for Multisite Autism fMRI**
 
 The study audits a **cohort-visible transductive** evaluation regime: test-subject
 nodes, imaging features and permitted phenotype/context relations may be present in the
 population graph during optimization, while test labels are excluded from the loss.
-Under that regime, the site-aware population graph reaches about 0.94-0.95 AUC on
-ABIDE-I. Performance falls to about 0.52-0.53 AUC when the target site is held out,
-and mechanism controls localise the cohort-visible gain to same-site supervision rather
-than same-site topology alone.
+Under that regime, the site-aware population graph reached about 0.94 cohort-level AUC on
+ABIDE-I. Leave-one-site-out evaluation gave 0.522 (C-PAC) and 0.532 (NIAK), with confidence
+intervals including 0.5 and no clear evidence of unseen-site discrimination, while an
+imaging-only reference remained higher (0.653 and 0.588). The controlled interventions
+indicated that the high cohort-level AUC depended on site-structured transductive connectivity
+and the availability of same-site supervision under the tested interventions, rather than on
+the total supervision budget alone.
 
 ## What is in here
 
@@ -79,6 +82,6 @@ only derived predictions, frozen splits and statistics are included. See `docs/D
 ## Citation and licence
 
 `CITATION.cff` describes the software artifact, released under **Apache License 2.0**
-(`Apache-2.0`). The public release is built from the audited tree as a clean root; GitHub Release `v1.0.0` is archived at Zenodo: **[10.5281/zenodo.22748744](https://doi.org/10.5281/zenodo.22748744)**.
+(`Apache-2.0`). The public release is built from the audited tree as a clean root; GitHub Release `v1.0.0` is archived at Zenodo: **[10.5281/zenodo.22748744](https://doi.org/10.5281/zenodo.22748744)**; release `v1.1.0` is archived at **[10.5281/zenodo.22892320](https://doi.org/10.5281/zenodo.22892320)** (concept DOI **[10.5281/zenodo.22748743](https://doi.org/10.5281/zenodo.22748743)**).
 
 This repository is a reproducibility artifact, not a manuscript archive.

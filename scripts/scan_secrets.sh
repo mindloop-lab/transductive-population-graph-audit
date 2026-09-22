@@ -13,13 +13,13 @@ trap 'rm -rf "$tmp"' EXIT
 
 curl -fsSL "$URL" -o "$tmp/$ARCHIVE"
 printf '%s  %s\n' "$GITLEAKS_SHA256" "$tmp/$ARCHIVE" | sha256sum -c -
-tar -xzf "$tmp/$ARCHIVE" -C "$tmp" gitleaks
+tar --no-same-owner -xzf "$tmp/$ARCHIVE" -C "$tmp" gitleaks
 
 # Scan an export of Git-tracked files only. The private audit repository intentionally
 # retains old development history; the eventual clean-root repository will additionally
 # run a full-history gitleaks scan.
 mkdir "$tmp/tree"
-git archive --format=tar HEAD | tar -xf - -C "$tmp/tree"
+git archive --format=tar HEAD | tar --no-same-owner -xf - -C "$tmp/tree"
 "$tmp/gitleaks" dir --no-banner --redact --exit-code 1 "$tmp/tree"
 
 echo "GITLEAKS PASS: no secrets detected in the tracked release tree"

@@ -7,7 +7,7 @@ For each site and replicate: the site macro of (AUC_ON - AUC_OFF) over that site
 seed, then averaged over seeds. Then across the three replicates: the mean and the spread.
 
 Control: the ON arm does not depend on the support draw, so its results must be identical across
-replicates for the same cell and seed. Any disagreement is reported as a determinism failure, not
+replicates for the same cell and seed. Any disagreement is reported as a cross-replicate inconsistency
 smoothed over.
 
 Decision rule (frozen before the run): if the across-replicate spread of the site effect is comparable
@@ -77,7 +77,6 @@ out = {
     "on_arm_cross_replicate": {"pairs_compared": on_control, "differing_pairs": len(failures),
                                "hypothesis": "ON arm invariant across draws: REFUTED",
                                "corrected_mechanism": "graph fixed across draws; supervised target set C+S with C=O\\R changes with the draw",
-                               "mechanism": "the graph includes the other-site support subjects, which per-draw differ",
                                "examples": failures[:5]},
     "frozen_decision_rule": "spread comparable to the effect => location and composition not separable",
 }

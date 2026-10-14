@@ -53,10 +53,25 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--boot", type=int, default=B)
+    ap.add_argument("--runs", default=str(RUNS), help="directory with the per-fit reports and OOF arrays")
+    ap.add_argument("--out-csv", default=str(R3 / "major1_site_level.csv"))
+    ap.add_argument("--out-json", default=str(R3 / "major1_bootstrap.json"))
     args = ap.parse_args()
     B_local = args.boot
 
-    reps = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(RUNS.glob("*_report.json"))]
+    # Unit selection is driven by the frozen manifest, not by whatever happens to sit in the directory:
+    # smoke runs and stray reports cannot enter an analysis, and a missing official run is caught upstream.
+    MANIFEST = json.loads((R3 / "SPLIT_AND_MASK_MANIFEST.json").read_text(encoding="utf-8"))
+    ALLOWED_UNITS = {f"cell{i:03d}_{c['site']}_f{c['fold']}_{arm}_s{s}"
+                     for i, c in enumerate(MANIFEST["cells"]) if c["feasible"]
+                     for arm in ("ON", "OFF") for s in MANIFEST["seeds"]["training"]}
+    RUNS_DIR = Path(args.runs)
+    found = sorted(RUNS_DIR.glob("*_report.json"))
+    kept = [p for p in found if p.name[:-len("_report.json")] in ALLOWED_UNITS]
+    stray = [p.name for p in found if p.name[:-len("_report.json")] not in ALLOWED_UNITS]
+    if stray:
+        print(f"  [unit filter] skipped {len(stray)} non-manifest reports: {stray[:3]}")
+    reps = [json.loads(p.read_text(encoding="utf-8")) for p in kept]
     by = {(r["cell"], r["arm"], r["seed"]): r for r in reps}
     cells_meta = defaultdict(set)
     for r in reps:
@@ -75,7 +90,7 @@ def main() -> None:
     mismatches, degenerate = [], 0
     fold_scores: dict = {}
     for r in reps:
-        z = np.load(RUNS / f"{r['tag']}_oof.npz", allow_pickle=True)
+        z = np.load(RUNS_DIR / f"{r['tag']}_oof.npz", allow_pickle=True)
         role = np.asarray(z["oof_role"])
         lab = np.asarray(z["oof_label"])
         lg = np.asarray(z["oof_logits"], dtype=np.float64)
@@ -189,7 +204,7 @@ def main() -> None:
         boot_records[site_rows[i]["site"]]["p_holm_18family"] = running
 
     tag = "DRY-RUN PARTIAL — NOT A RESULT" if args.dry_run else "FINAL"
-    with (R3 / "major1_site_level.csv").open("w", newline="", encoding="utf-8") as f:
+    with Path(args.out_csv).open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["site", "folds_used", "primary", "ci_lo", "ci_hi",
                                           "p_two_sided", "p_holm_18family", "pooled_on", "pooled_off",
                                           "per_seed", "folds_per_seed"])
@@ -203,9 +218,9 @@ def main() -> None:
                          "sites": boot_records,
                          "note": "no pairwise sign pattern here may be promised as a positive effect"},
            "holm_status": "blocked for the MANUSCRIPT 13-item family (7/13 raw p locatable); Holm IS applied to Major 1's own 18-site family as p_holm_18family, which is a separate family"}
-    (R3 / "major1_bootstrap.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    Path(args.out_json).write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"{tag}: {len(site_rows)} sites | fits {len(reps)} | degenerate {degenerate} | "
-          f"mismatches 0 | -> major1_site_level.csv, major1_bootstrap.json")
+          f"mismatches 0 | -> {Path(args.out_csv).name}, {Path(args.out_json).name}")
     for r in site_rows[:10]:
         print(f"  {r['site']:<10} folds {r['folds_used']:<2} primary {r['primary']:+.3f} "
               f"[{r['ci_lo']:+.3f},{r['ci_hi']:+.3f}] p={r['p_two_sided']:.3f}")

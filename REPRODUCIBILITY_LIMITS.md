@@ -1,12 +1,13 @@
-# Reproducibility limits (read before using this bundle)
+# Reproducibility limits
 
-1. Training inputs are rebuilt from a local cache and absolute server paths; the raw-data rebuild
-   pipeline is **not** bundled. What is bundled is everything needed to **recompute the reported
-   statistics from saved predictions**.
-2. The paired experiment, the symmetrised parallel analysis and the support-sampling sensitivity use
-   different edge-construction paths from the original cohort model. Orientation findings are **not**
-   transferable between them, in either direction.
-3. Per-site intervals are conditional on the fitted model and the fixed seed set; they exclude
-   training-seed variability and are narrower than total uncertainty.
-4. No claim of orientation invariance, of a pure causal effect of supervision location, or of a
-   general property of population-GNNs is made anywhere in these materials.
+- The compact R3 test-prediction archive and portable statistical entry points are committed here.
+  Full original reports, training curves and cache reconstruction are not included. Lineage records
+  the original file hashes; this does not retroactively pin campaign-time training code or inputs.
+- The paired, bidirectional and support analyses use different construction paths from the original
+  cohort model. Their orientation finding does not establish orientation sensitivity of other paths.
+- Intervals condition on fixed predictions and seeds. Shared training across sites limits independence
+  of site effects; this is not complete retraining uncertainty.
+- Three support-sensitivity sites were pre-selected. The judgement threshold was not numerically frozen;
+  sampling variability does not establish causal separability or nonseparability.
+- Per-site tail-ratio p values and their Holm corrections are withdrawn and absent from formal outputs.
+  Historical notes may retain them as explicitly withdrawn records; do not cite them as validated tests.

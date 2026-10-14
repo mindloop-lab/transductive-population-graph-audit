@@ -25,3 +25,13 @@ Added / corrected
   * blanket "all comparisons significant after Holm" wording removed; comparisons whose archived inputs
     cannot be relocated are reported descriptively with no formal significance claim.
   * six missing `\input` caption dependencies resolved; both PDFs compile from a self-contained tree.
+
+## Release-engineering corrections — proposed v1.2.0
+
+- Require every manifest-defined run, including whole cells missing from a directory; validate reports,
+  saved prediction AUCs, paired subject identity and labels before formal inference.
+- Remove withdrawn per-site tail-ratio p values and Holm output from the conditional aggregator.
+- Supply compact, unchanged test logits/labels/IDs with source-file hashes for 1,326 fits.
+- Replace private-path R3 scripts with parameterized statistical entry points and retain core model code.
+- Align CFF/Zenodo metadata at proposed version 1.2.0; old version DOI is not represented as this release.
+- Restore executable reproduction instructions and extend CI with R3 regression and result checks.

@@ -1,15 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite this software release and the accompanying article."
-title: "Code and frozen results for: Auditing Site-Dependent Performance in Transductive Population Graph Neural Networks for Multisite Autism fMRI"
+title: "Code and frozen results for: Reliable Evaluation of Transductive Population Graph Neural Networks for Multisite Autism fMRI"
 type: software
-version: "R3 revision (unreleased; a new version DOI will be minted for this revision)"
+version: "1.2.0"
+date-released: "2026-10-14"
 license: Apache-2.0
 repository-code: "https://github.com/mindloop-lab/transductive-population-graph-audit"
-doi: "10.5281/zenodo.22892320"
+doi: "10.5281/zenodo.22748743"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22892320"
-    description: "Version DOI reserved for release v1.1.0 (registered when that release is published)"
+    description: "Archived version DOI for release v1.1.0 (does not contain R3 additions)"
   - type: doi
     value: "10.64898/2026.09.15.751719"
     description: "bioRxiv preprint of the accompanying manuscript (previous title), posted 2026-09-21"
@@ -21,7 +22,7 @@ identifiers:
     description: "Concept DOI (all versions)"
 abstract: >
   Reproducibility software and frozen analysis artifacts for the study
-  "Auditing Site-Dependent Performance in Transductive Population Graph Neural Networks for Multisite Autism fMRI."
+  "Reliable Evaluation of Transductive Population Graph Neural Networks for Multisite Autism fMRI."
 keywords:
   - transductive learning
   - population graph neural network

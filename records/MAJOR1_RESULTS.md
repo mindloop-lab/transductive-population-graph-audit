@@ -1,3 +1,7 @@
+> Historical snapshot retained for traceability. It is not the current release contract.
+> Per-site tail-ratio p values/Holm results and the former graph-change explanation are withdrawn.
+> Current input checks and executable results are documented in docs/R3_RECOMPUTE.md.
+
 # Major 1 — supervised-information location (paired ON/OFF)
 
 STATUS: FINAL -- campaign complete; both aggregation gates passed

@@ -1,0 +1,206 @@
+{
+  "complete": true,
+  "status": "robustness parallel analysis (author decision (b)+(c)); primary numbers unchanged",
+  "canonical": {
+    "n_sites": 18,
+    "population_macro": 0.25185267496744107,
+    "ci95": [
+      0.18408906312850026,
+      0.32220618419646196
+    ],
+    "null_centred_p": 9.999000099990002e-05,
+    "sign_k": 17,
+    "sign_p": 0.00014495849609375,
+    "per_site": {
+      "KKI": 0.17333333333333334,
+      "LEUVEN_1": -0.02962962962962963,
+      "LEUVEN_2": 0.42777777777777776,
+      "MAX_MUN": 0.07333333333333332,
+      "NYU": 0.08450459482038429,
+      "OHSU": 0.3148148148148148,
+      "OLIN": 0.22222222222222224,
+      "PITT": 0.23688888888888893,
+      "SBL": 0.5796296296296296,
+      "SDSU": 0.2777777777777778,
+      "STANFORD": 0.23518518518518516,
+      "TRINITY": 0.21444444444444444,
+      "UCLA_1": 0.18674603174603174,
+      "UCLA_2": 0.13333333333333333,
+      "UM_1": 0.3276623376623377,
+      "UM_2": 0.22999999999999998,
+      "USM": 0.3050462962962963,
+      "YALE": 0.5402777777777779
+    },
+    "folds": {
+      "KKI": 5,
+      "LEUVEN_1": 5,
+      "LEUVEN_2": 5,
+      "MAX_MUN": 5,
+      "NYU": 5,
+      "OHSU": 5,
+      "OLIN": 5,
+      "PITT": 5,
+      "SBL": 5,
+      "SDSU": 3,
+      "STANFORD": 5,
+      "TRINITY": 5,
+      "UCLA_1": 5,
+      "UCLA_2": 5,
+      "UM_1": 5,
+      "UM_2": 5,
+      "USM": 5,
+      "YALE": 5
+    },
+    "fits": 528
+  },
+  "symmetrised": {
+    "n_sites": 18,
+    "population_macro": -0.0032261630507244574,
+    "ci95": [
+      -0.01980020073331477,
+      0.015032802615404945
+    ],
+    "null_centred_p": 0.7193280671932807,
+    "sign_k": 8,
+    "sign_p": 0.8145294189453125,
+    "per_site": {
+      "KKI": -0.05111111111111111,
+      "LEUVEN_1": 0.007407407407407421,
+      "LEUVEN_2": 0.025925925925925908,
+      "MAX_MUN": -0.023888888888888894,
+      "NYU": 0.05441102756892232,
+      "OHSU": 0.03148148148148149,
+      "OLIN": -0.005555555555555559,
+      "PITT": -0.010000000000000002,
+      "SBL": -0.05000000000000001,
+      "SDSU": -0.02777777777777778,
+      "STANFORD": 0.0037037037037036986,
+      "TRINITY": -0.03666666666666668,
+      "UCLA_1": -0.03638888888888891,
+      "UCLA_2": -0.05555555555555556,
+      "UM_1": 0.03529581529581528,
+      "UM_2": -0.011666666666666665,
+      "USM": 0.005925925925925908,
+      "YALE": 0.08638888888888889
+    },
+    "folds": {
+      "KKI": 5,
+      "LEUVEN_1": 5,
+      "LEUVEN_2": 5,
+      "MAX_MUN": 5,
+      "NYU": 5,
+      "OHSU": 5,
+      "OLIN": 5,
+      "PITT": 5,
+      "SBL": 5,
+      "SDSU": 3,
+      "STANFORD": 5,
+      "TRINITY": 5,
+      "UCLA_1": 5,
+      "UCLA_2": 5,
+      "UM_1": 5,
+      "UM_2": 5,
+      "USM": 5,
+      "YALE": 5
+    },
+    "fits": 528
+  },
+  "per_site_side_by_side": {
+    "KKI": {
+      "canonical": 0.17333333333333334,
+      "symmetrised": -0.05111111111111111,
+      "same_sign": false
+    },
+    "LEUVEN_1": {
+      "canonical": -0.02962962962962963,
+      "symmetrised": 0.007407407407407421,
+      "same_sign": false
+    },
+    "LEUVEN_2": {
+      "canonical": 0.42777777777777776,
+      "symmetrised": 0.025925925925925908,
+      "same_sign": true
+    },
+    "MAX_MUN": {
+      "canonical": 0.07333333333333332,
+      "symmetrised": -0.023888888888888894,
+      "same_sign": false
+    },
+    "NYU": {
+      "canonical": 0.08450459482038429,
+      "symmetrised": 0.05441102756892232,
+      "same_sign": true
+    },
+    "OHSU": {
+      "canonical": 0.3148148148148148,
+      "symmetrised": 0.03148148148148149,
+      "same_sign": true
+    },
+    "OLIN": {
+      "canonical": 0.22222222222222224,
+      "symmetrised": -0.005555555555555559,
+      "same_sign": false
+    },
+    "PITT": {
+      "canonical": 0.23688888888888893,
+      "symmetrised": -0.010000000000000002,
+      "same_sign": false
+    },
+    "SBL": {
+      "canonical": 0.5796296296296296,
+      "symmetrised": -0.05000000000000001,
+      "same_sign": false
+    },
+    "SDSU": {
+      "canonical": 0.2777777777777778,
+      "symmetrised": -0.02777777777777778,
+      "same_sign": false
+    },
+    "STANFORD": {
+      "canonical": 0.23518518518518516,
+      "symmetrised": 0.0037037037037036986,
+      "same_sign": true
+    },
+    "TRINITY": {
+      "canonical": 0.21444444444444444,
+      "symmetrised": -0.03666666666666668,
+      "same_sign": false
+    },
+    "UCLA_1": {
+      "canonical": 0.18674603174603174,
+      "symmetrised": -0.03638888888888891,
+      "same_sign": false
+    },
+    "UCLA_2": {
+      "canonical": 0.13333333333333333,
+      "symmetrised": -0.05555555555555556,
+      "same_sign": false
+    },
+    "UM_1": {
+      "canonical": 0.3276623376623377,
+      "symmetrised": 0.03529581529581528,
+      "same_sign": true
+    },
+    "UM_2": {
+      "canonical": 0.22999999999999998,
+      "symmetrised": -0.011666666666666665,
+      "same_sign": false
+    },
+    "USM": {
+      "canonical": 0.3050462962962963,
+      "symmetrised": 0.005925925925925908,
+      "same_sign": true
+    },
+    "YALE": {
+      "canonical": 0.5402777777777779,
+      "symmetrised": 0.08638888888888889,
+      "same_sign": true
+    }
+  },
+  "sign_agreement": {
+    "agree": 7,
+    "comparable_sites": 18,
+    "canonical_only": [],
+    "symmetrised_only": []
+  }
+}

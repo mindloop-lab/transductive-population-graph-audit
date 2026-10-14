@@ -1,0 +1,13 @@
+major1_supervision_location:
+  split_seed: 20261011
+  support_sampling_seed: 20261012
+  training_seeds: [666, 2025, 2026]
+  n_folds: 5
+  min_per_class: 5
+  validation: {max_n: 120, fraction: 0.1, site_scope: other_sites_only}
+  arms: [SAME_SITE_ON, SAME_SITE_OFF]
+  matched: {total_supervised: true, class_counts: true, graph_identical: true}
+  primary_metric: site_macro_paired_auc_difference_averaged_over_three_seeds
+  secondary_metric: pooled_oof_auc
+  primary_estimand: sensitivity_of_predictions_to_location_of_supervised_support
+  not_claimed: [literal_label_propagation, cross_architecture_generality, unseen_site_validity]

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite this software release and the accompanying article."
 title: "Code and frozen results for: Auditing Site-Dependent Performance in Transductive Population Graph Neural Networks for Multisite Autism fMRI"
 type: software
-version: 1.1.0
+version: "R3 revision (unreleased; a new version DOI will be minted for this revision)"
 license: Apache-2.0
 repository-code: "https://github.com/mindloop-lab/transductive-population-graph-audit"
 doi: "10.5281/zenodo.22892320"

@@ -1,3 +1,7 @@
+> Historical snapshot retained for traceability. It is not the current release contract.
+> Per-site tail-ratio p values/Holm results and the former graph-change explanation are withdrawn.
+> Current input checks and executable results are documented in docs/R3_RECOMPUTE.md.
+
 # P1 interim finding: the "same-site" arm is not invariant to the support draw (2026-10-13)
 
 Before running, the ON arm was expected to be invariant across the three support-sampling replicates,

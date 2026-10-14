@@ -8,7 +8,7 @@ CI        : subject-level bootstrap inside each site (test-fold subjects only; t
             scores are resampled together), B=10,000, seed 20261012, percentile interval.
 Integrity : every fold's AUC is recomputed from the saved OOF logits and compared with the value in
             the run report; a mismatch aborts. Fold AUCs with a degenerate class are marked, kept in
-            the record and excluded from the primary mean, as pre-registered.
+            the record and excluded from the primary mean, as specified in the protocol.
 
 Final mode refuses to emit numbers unless all 528 fits are present. --dry-run emits marked
 partial output for code validation only.
@@ -22,8 +22,9 @@ from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
+from _common import load_reports, load_predictions, validate_pairs
 
-R3 = Path("/mnt/disk_8tb/codex/2609-wan/paperM/PAPERM_CMIG_R3_20261011")
+R3 = Path("reproduced/r3")
 RUNS = R3 / "major1_runs"
 SEEDS = [666, 2025, 2026]
 B = 10_000
@@ -51,6 +52,7 @@ def auc_matrix(s: np.ndarray, labels: np.ndarray):
 
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--manifest", required=True, type=Path)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--boot", type=int, default=B)
     ap.add_argument("--runs", default=str(RUNS), help="directory with the per-fit reports and OOF arrays")
@@ -59,38 +61,21 @@ def main() -> None:
     args = ap.parse_args()
     B_local = args.boot
 
-    # Unit selection is driven by the frozen manifest, not by whatever happens to sit in the directory:
-    # smoke runs and stray reports cannot enter an analysis, and a missing official run is caught upstream.
-    MANIFEST = json.loads((R3 / "SPLIT_AND_MASK_MANIFEST.json").read_text(encoding="utf-8"))
-    ALLOWED_UNITS = {f"cell{i:03d}_{c['site']}_f{c['fold']}_{arm}_s{s}"
-                     for i, c in enumerate(MANIFEST["cells"]) if c["feasible"]
-                     for arm in ("ON", "OFF") for s in MANIFEST["seeds"]["training"]}
-    RUNS_DIR = Path(args.runs)
-    found = sorted(RUNS_DIR.glob("*_report.json"))
-    kept = [p for p in found if p.name[:-len("_report.json")] in ALLOWED_UNITS]
-    stray = [p.name for p in found if p.name[:-len("_report.json")] not in ALLOWED_UNITS]
-    if stray:
-        print(f"  [unit filter] skipped {len(stray)} non-manifest reports: {stray[:3]}")
-    reps = [json.loads(p.read_text(encoding="utf-8")) for p in kept]
+    reps, expected = load_reports(Path(args.manifest), RUNS_DIR := Path(args.runs),
+                                  allow_partial=args.dry_run)
     by = {(r["cell"], r["arm"], r["seed"]): r for r in reps}
     cells_meta = defaultdict(set)
     for r in reps:
         cells_meta[r["site"]].add(r["cell"])
-    n_cells = sum(len(v) for v in cells_meta.values())
-    all_cells = sorted({c for v in cells_meta.values() for c in v})
-    complete = all((c, a, s) in by for c in all_cells for s in SEEDS for a in ("ON", "OFF"))
-    if not complete:
-        missing = [(c, a, s) for c in all_cells for s in SEEDS for a in ("ON", "OFF")
-                   if (c, a, s) not in by]
-        print(f"  [gate] {len(missing)} triples missing of {len(all_cells) * 2 * len(SEEDS)}")
-    if not complete and not args.dry_run:
-        raise SystemExit(f"refusing: campaign incomplete ({len(reps)} fits on disk); use --dry-run")
+    if not reps:
+        raise SystemExit("refusing: no official runs")
+    validate_pairs(reps, RUNS_DIR)
 
     # --- integrity: recompute each fold AUC from OOF logits and compare with the report ---
     mismatches, degenerate = [], 0
     fold_scores: dict = {}
     for r in reps:
-        z = np.load(RUNS_DIR / f"{r['tag']}_oof.npz", allow_pickle=True)
+        z = load_predictions(RUNS_DIR, r)
         role = np.asarray(z["oof_role"])
         lab = np.asarray(z["oof_label"])
         lg = np.asarray(z["oof_logits"], dtype=np.float64)
@@ -175,9 +160,8 @@ def main() -> None:
             raise SystemExit(f"ABORT: bootstrap for {site} does not reproduce the point estimate "
                              f"(repl mean {np.nanmean(repl):+.3f} vs point {primary:+.3f}); "
                              f"the CI is not reportable until this is fixed")
-        p_two = 2 * min((repl <= 0).mean(), (repl >= 0).mean())
         boot_records[site] = {"primary_mean": primary, "ci95": [float(lo), float(hi)],
-                              "bootstrap_two_sided_p": float(p_two), "b": B_local, "seed": BOOT_SEED,
+                              "b": B_local, "seed": BOOT_SEED,
                               "n_site_test_subjects": nsub}
         # secondary: pooled OOF AUC over the site's test subjects (subject-weighted)
         pools = {}
@@ -189,24 +173,16 @@ def main() -> None:
             pools[s] = (auc(on, lo_), auc(off, lo2))
         site_rows.append({"site": site, "folds_used": len(usable), "primary": primary,
                           "per_seed": per_seed, "folds_per_seed": per_seed_folds,
-                          "ci_lo": float(lo), "ci_hi": float(hi), "p_two_sided": float(p_two),
+                          "ci_lo": float(lo), "ci_hi": float(hi),
                           "pooled_on": float(np.mean([pools[s][0] for s in pools])),
                           "pooled_off": float(np.mean([pools[s][1] for s in pools]))})
 
-    # Holm step-down within Major 1's own site family (separate from the manuscript's 13-item family)
-    order = sorted(range(len(site_rows)), key=lambda i: site_rows[i]["p_two_sided"])
-    m = len(site_rows)
-    running = 0.0
-    for rank, i in enumerate(order):
-        adj = min(1.0, (m - rank) * site_rows[i]["p_two_sided"])
-        running = max(running, adj)
-        site_rows[i]["p_holm_18family"] = running
-        boot_records[site_rows[i]["site"]]["p_holm_18family"] = running
-
     tag = "DRY-RUN PARTIAL — NOT A RESULT" if args.dry_run else "FINAL"
+    Path(args.out_csv).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.out_json).parent.mkdir(parents=True, exist_ok=True)
     with Path(args.out_csv).open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["site", "folds_used", "primary", "ci_lo", "ci_hi",
-                                          "p_two_sided", "p_holm_18family", "pooled_on", "pooled_off",
+                                          "pooled_on", "pooled_off",
                                           "per_seed", "folds_per_seed"])
         w.writeheader()
         for r in site_rows:
@@ -217,13 +193,13 @@ def main() -> None:
            "bootstrap": {"b": B_local, "seed": BOOT_SEED, "unit": "test-fold subjects within site, paired",
                          "sites": boot_records,
                          "note": "no pairwise sign pattern here may be promised as a positive effect"},
-           "holm_status": "blocked for the MANUSCRIPT 13-item family (7/13 raw p locatable); Holm IS applied to Major 1's own 18-site family as p_holm_18family, which is a separate family"}
+           "inference_status": "conditional intervals only; withdrawn per-site tests and Holm values are not computed"}
     Path(args.out_json).write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"{tag}: {len(site_rows)} sites | fits {len(reps)} | degenerate {degenerate} | "
           f"mismatches 0 | -> {Path(args.out_csv).name}, {Path(args.out_json).name}")
     for r in site_rows[:10]:
         print(f"  {r['site']:<10} folds {r['folds_used']:<2} primary {r['primary']:+.3f} "
-              f"[{r['ci_lo']:+.3f},{r['ci_hi']:+.3f}] p={r['p_two_sided']:.3f}")
+              f"[{r['ci_lo']:+.3f},{r['ci_hi']:+.3f}]")
 
 
 if __name__ == "__main__":

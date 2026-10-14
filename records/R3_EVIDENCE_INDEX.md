@@ -1,3 +1,7 @@
+> Historical snapshot retained for traceability. It is not the current release contract.
+> Per-site tail-ratio p values/Holm results and the former graph-change explanation are withdrawn.
+> Current input checks and executable results are documented in docs/R3_RECOMPUTE.md.
+
 # R3 evidence index (2026-10-13, regenerated after the external review)
 
 Progress at index time: **528/528 fits**; aggregation FINAL; state machine `R3_REVIEW_READY`.

@@ -1,8 +1,8 @@
 {
-  "title": "Code and frozen results for: Auditing Site-Dependent Performance in Transductive Population Graph Neural Networks for Multisite Autism fMRI",
-  "description": "Reproducibility software and frozen analysis artifacts for the study \"Auditing Site-Dependent Performance in Transductive Population Graph Neural Networks for Multisite Autism fMRI\". The release includes the deterministic evaluation harness, recovered per-seed outer-fold generation partitions, the reconstructed mean-fold aggregation reference, the frozen result registry, redistributed out-of-fold and leave-one-site-out prediction artifacts for release-backed conditions, derived statistics, and registry/provenance validation tools. Historical scalar rows without redistributed backing predictions are explicitly identified in the registry. No primary imaging data are redistributed.",
+  "title": "Code and frozen results for: Reliable Evaluation of Transductive Population Graph Neural Networks for Multisite Autism fMRI",
+  "description": "Reproducibility software for multisite population-graph evaluation. Version 1.2.0 adds manifest-validated R3 statistics and compact test-prediction inputs for 528 directed, 528 bidirectional and 270 support-sampling fits. The positive paired effect is implementation-conditional and does not survive bidirectional edges. Withdrawn per-site significance tests are not recomputed. Original cohort release data remain available. No primary imaging data or end-to-end R3 training-input rebuild is supplied.",
   "upload_type": "software",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "access_right": "open",
   "creators": [
     {
@@ -53,7 +53,7 @@
     },
     {
       "relation": "isSupplementTo",
-      "identifier": "https://github.com/mindloop-lab/transductive-population-graph-audit/tree/v1.1.0",
+      "identifier": "https://github.com/mindloop-lab/transductive-population-graph-audit/tree/v1.2.0",
       "scheme": "url",
       "resource_type": "software"
     },

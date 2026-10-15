@@ -1,0 +1,45 @@
+{
+  "n_sites": 18,
+  "population_macro": 0.25185267496744107,
+  "ci95": [
+    0.18408906312850026,
+    0.32220618419646196
+  ],
+  "null_centred_p": 9.999000099990002e-05,
+  "sign_k": 17,
+  "sign_n": 18,
+  "sign_p": 0.00014495849609375,
+  "per_site": {
+    "KKI": 0.17333333333333334,
+    "LEUVEN_1": -0.02962962962962963,
+    "LEUVEN_2": 0.42777777777777776,
+    "MAX_MUN": 0.07333333333333332,
+    "NYU": 0.08450459482038429,
+    "OHSU": 0.3148148148148148,
+    "OLIN": 0.22222222222222224,
+    "PITT": 0.23688888888888893,
+    "SBL": 0.5796296296296296,
+    "SDSU": 0.2777777777777778,
+    "STANFORD": 0.23518518518518516,
+    "TRINITY": 0.21444444444444444,
+    "UCLA_1": 0.18674603174603174,
+    "UCLA_2": 0.13333333333333333,
+    "UM_1": 0.3276623376623377,
+    "UM_2": 0.22999999999999998,
+    "USM": 0.3050462962962963,
+    "YALE": 0.5402777777777779
+  },
+  "status": "post-hoc implementation of a pre-specified endpoint",
+  "fits": 528,
+  "population_macro_per_seed": {
+    "666": 0.21682229141878262,
+    "2025": 0.25553610351636663,
+    "2026": 0.2831996299671738
+  },
+  "inference_scope": "fixed models and seeds; site-resample uncertainty; exchangeability is approximate",
+  "per_site_inference": "withheld: no valid per-site p or Holm values are computed",
+  "withdrawn": [
+    "tail-ratio per-site p",
+    "Holm adjustments of withdrawn per-site p"
+  ]
+}

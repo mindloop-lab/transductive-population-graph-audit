@@ -51,3 +51,15 @@ jobs:
         run: python -m pip install -r environment/requirements-ci.txt
       - name: Run synthetic end-to-end smoke test
         run: bash run_smoke.sh
+
+  figure-render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install figure dependencies
+        run: python -m pip install -r figure_sources/requirements_fig6_fig7.txt
+      - name: Render revised Figures 6 and 7 from frozen inputs
+        run: python figure_sources/make_r3_figures.py --output-dir "$RUNNER_TEMP/r3-figures"

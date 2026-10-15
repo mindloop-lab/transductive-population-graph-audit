@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="604.8pt" height="345.6pt" viewBox="0 0 604.8 345.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 604.8 345.6 
+L 604.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 18.7488 114.3936 
+L 119.1456 114.3936 
+Q 126.4032 114.3936 126.4032 110.2464 
+L 126.4032 43.5456 
+Q 126.4032 39.3984 119.1456 39.3984 
+L 18.7488 39.3984 
+Q 11.4912 39.3984 11.4912 43.5456 
+L 11.4912 110.2464 
+Q 11.4912 114.3936 18.7488 114.3936 
+z
+" clip-path="url(#pbeae1015a9)" style="fill: #dbe9f6; stroke: #adb7c2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 135.4752 114.3936 
+L 235.872 114.3936 
+Q 243.1296 114.3936 243.1296 110.2464 
+L 243.1296 43.5456 
+Q 243.1296 39.3984 235.872 39.3984 
+L 135.4752 39.3984 
+Q 128.2176 39.3984 128.2176 43.5456 
+L 128.2176 110.2464 
+Q 128.2176 114.3936 135.4752 114.3936 
+z
+" clip-path="url(#pbeae1015a9)" style="fill: #e3efdc; stroke: #adb7c2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 252.2016 114.3936 
+L 352.5984 114.3936 
+Q 359.856 114.3936 359.856 110.2464 
+L 359.856 43.5456 
+Q 359.856 39.3984 352.5984 39.3984 
+L 252.2016 39.3984 
+Q 244.944 39.3984 244.944 43.5456 
+L 244.944 110.2464 
+Q 244.944 114.3936 252.2016 114.3936 
+z
+" clip-path="url(#pbeae1015a9)" style="fill: #fce9d9; stroke: #adb7c2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 368.928 114.3936 
+L 469.3248 114.3936 
+Q 476.5824 114.3936 476.5824 110.2464 
+L 476.5824 43.5456 
+Q 476.5824 39.3984 469.3248 39.3984 
+L 368.928 39.3984 
+Q 361.6704 39.3984 361.6704 43.5456 
+L 361.6704 110.2464 
+Q 361.6704 114.3936 368.928 114.3936 
+z
+" clip-path="url(#pbeae1015a9)" style="fill: #e9edf0; stroke: #adb7c2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 485.6544 114.3936 
+L 586.0512 114.3936 
+Q 593.3088 114.3936 593.3088 110.2464 
+L 593.3088 43.5456 
+Q 593.3088 39.3984 586.0512 39.3984 
+L 485.6544 39.3984 
+Q 478.3968 39.3984 478.3968 43.5456 
+L 478.3968 110.2464 
+Q 478.3968 114.3936 485.6544 114.3936 
+z
+" clip-path="url(#pbeae1015a9)" style="fill: #f1e7f3; stroke: #adb7c2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 18.7488 221.5296 
+L 287.28 221.5296 
+Q 294.5376 221.5296 294.5376 217.3824 
+L 294.5376 155.8656 
+Q 294.5376 151.7184 287.28 151.7184 
+L 18.7488 151.7184 
+Q 11.4912 151.7184 11.4912 155.8656 
+L 11.4912 217.3824 
+Q 11.4912 221.5296 18.7488 221.5296 
+z
+" clip-path="url(#pbeae1015a9)" style="fill: #f1f7ed; stroke: #adb7c2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 318.1248 221.5296 
+L 586.656 221.5296 
+Q 593.9136 221.5296 593.9136 217.3824 
+L 593.9136 155.8656 
+Q 593.9136 151.7184 586.656 151.7184 
+L 318.1248 151.7184 
+Q 310.8672 151.7184 310.8672 155.8656 
+L 310.8672 217.3824 
+Q 310.8672 221.5296 318.1248 221.5296 
+z
+" clip-path="url(#pbeae1015a9)" style="fill: #fff5ec; stroke: #adb7c2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="15.12" y="20.736" transform="rotate(-0 15.12 20.736)">A   Subject roles in one paired site–fold cell</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle" x="68.9472" y="62.208" transform="rotate(-0 68.9472 62.208)">T</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="68.9472" y="84.3264" transform="rotate(-0 68.9472 84.3264)">Target-site test</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465463" x="68.9472" y="101.2608" transform="rotate(-0 68.9472 101.2608)">Labels sealed</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle" x="185.6736" y="62.208" transform="rotate(-0 185.6736 62.208)">S</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="185.6736" y="84.3264" transform="rotate(-0 185.6736 84.3264)">Target-site support</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465463" x="185.6736" y="101.2608" transform="rotate(-0 185.6736 101.2608)">Supervised in ON</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle" x="302.4" y="62.208" transform="rotate(-0 302.4 62.208)">R</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="302.4" y="84.3264" transform="rotate(-0 302.4 84.3264)">Other-site support</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465463" x="302.4" y="101.2608" transform="rotate(-0 302.4 101.2608)">Supervised in OFF</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle" x="419.1264" y="62.208" transform="rotate(-0 419.1264 62.208)">C</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="419.1264" y="84.3264" transform="rotate(-0 419.1264 84.3264)">Common trainable</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465463" x="419.1264" y="101.2608" transform="rotate(-0 419.1264 101.2608)">Supervised in both</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle" x="535.8528" y="62.208" transform="rotate(-0 535.8528 62.208)">V</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle" x="535.8528" y="84.3264" transform="rotate(-0 535.8528 84.3264)">Fixed validation</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #465463" x="535.8528" y="101.2608" transform="rotate(-0 535.8528 101.2608)">Model selection only</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="15.12" y="134.784" transform="rotate(-0 15.12 134.784)">B   Change support location; match the supervision budget</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #37602c" x="28.4256" y="169.344" transform="rotate(-0 28.4256 169.344)">ON   Target-site support</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="28.4256" y="191.808" transform="rotate(-0 28.4256 191.808)">Supervised labels:  C ∪ S</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="28.4256" y="210.816" transform="rotate(-0 28.4256 210.816)">R remains in the graph, without training labels</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8c5422" x="327.8016" y="169.344" transform="rotate(-0 327.8016 169.344)">OFF   Other-site support</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="327.8016" y="191.808" transform="rotate(-0 327.8016 191.808)">Supervised labels:  C ∪ R</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="327.8016" y="210.816" transform="rotate(-0 327.8016 210.816)">S remains in the graph, without training labels</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="302.4" y="235.008" transform="rotate(-0 302.4 235.008)">R matches S in total size and per-class counts; C = O ∖ R</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="15.12" y="260.928" transform="rotate(-0 15.12 260.928)">C   Fixed across ON and OFF</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="15.12" y="279.936" transform="rotate(-0 15.12 279.936)">Population edges: same-site pairs among T ∪ S ∪ R ∪ C; V has no population edges.</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="15.12" y="298.944" transform="rotate(-0 15.12 298.944)">Same graph, validation set, initialisation and training schedule in each paired comparison.</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="15.12" y="317.952" transform="rotate(-0 15.12 317.952)">Preprocessing fit: S ∪ O; T and V are transform-only. Test labels never supervise training.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pbeae1015a9">
+   <rect x="0" y="0" width="604.8" height="345.6"/>
+  </clipPath>
+ </defs>
+</svg>

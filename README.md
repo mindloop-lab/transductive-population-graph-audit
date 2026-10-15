@@ -40,6 +40,16 @@ For conditional within-site intervals run `major1_aggregate.py` with `--manifest
 It computes no per-site p values or Holm adjustments. These intervals condition on fixed fitted models
 and seeds. All R3 tools verify the full expected run set and saved-prediction AUCs before formal output.
 
+## Manuscript Figures 6 and 7
+
+The revised protocol schematic and site-effect forest plot have editable SVG sources,
+a Python generator and frozen plotting inputs. See [figure reproduction](docs/FIGURES_6_7.md).
+
+```bash
+python -m pip install -r figure_sources/requirements_fig6_fig7.txt
+python figure_sources/make_r3_figures.py --output-dir reproduced/figures
+```
+
 ## Original model paths and release checks
 
 ```bash

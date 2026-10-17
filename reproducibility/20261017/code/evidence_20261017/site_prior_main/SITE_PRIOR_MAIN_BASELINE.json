@@ -1,0 +1,178 @@
+{
+  "protocol": "canonical main analysis: StratifiedKFold(10, shuffle=True, random_state=666) outer folds, inner optimization-training set = StratifiedShuffleSplit(1, test_size=10%, random_state=666)",
+  "split_provenance": "RECONSTRUCTED from the documented recipe in scripts/train_transductive_10fold_fast.py; no saved inner mask was found, so the reconstruction is asserted only where it reproduces the recorded fold identity/AUCs (see verification)",
+  "verification": {
+    "reconstructed_fold_ids_equal_recorded": true,
+    "pooled_auc_from_frozen_oof": 0.9396089160357151,
+    "auc_convention": "softmax(logits,axis=1)[:,1]"
+  },
+  "cohort": {
+    "n_subjects": 871,
+    "n_sites": 20,
+    "asd": 403,
+    "td": 468,
+    "subjects_scored": 871,
+    "subjects_unscored": 0
+  },
+  "pooled_oof_auc": 0.5056228924094929,
+  "pooled_ci_95_site_resample": [
+    0.4176388002243165,
+    0.5464389246726991
+  ],
+  "bootstrap": {
+    "B": 10000,
+    "seed": 20261015,
+    "unit": "site",
+    "excludes": "retraining uncertainty"
+  },
+  "fold_fallbacks": 0,
+  "per_site": {
+    "CALTECH": {
+      "auc": 0.04,
+      "n": 15,
+      "asd": 5,
+      "td": 10,
+      "proportion": 0.3333333333333333
+    },
+    "CMU": {
+      "auc": 0.35,
+      "n": 11,
+      "asd": 6,
+      "td": 5,
+      "proportion": 0.5454545454545454
+    },
+    "KKI": {
+      "auc": 0.2222222222222222,
+      "n": 33,
+      "asd": 12,
+      "td": 21,
+      "proportion": 0.36363636363636365
+    },
+    "LEUVEN_1": {
+      "auc": 0.2653061224489796,
+      "n": 28,
+      "asd": 14,
+      "td": 14,
+      "proportion": 0.5
+    },
+    "LEUVEN_2": {
+      "auc": 0.23958333333333334,
+      "n": 28,
+      "asd": 12,
+      "td": 16,
+      "proportion": 0.42857142857142855
+    },
+    "MAX_MUN": {
+      "auc": 0.31676413255360625,
+      "n": 46,
+      "asd": 19,
+      "td": 27,
+      "proportion": 0.41304347826086957
+    },
+    "NYU": {
+      "auc": 0.4074738003309432,
+      "n": 172,
+      "asd": 74,
+      "td": 98,
+      "proportion": 0.43023255813953487
+    },
+    "OHSU": {
+      "auc": 0.11217948717948718,
+      "n": 25,
+      "asd": 12,
+      "td": 13,
+      "proportion": 0.48
+    },
+    "OLIN": {
+      "auc": 0.3520408163265306,
+      "n": 28,
+      "asd": 14,
+      "td": 14,
+      "proportion": 0.5
+    },
+    "PITT": {
+      "auc": 0.34375,
+      "n": 50,
+      "asd": 24,
+      "td": 26,
+      "proportion": 0.48
+    },
+    "SBL": {
+      "auc": 0.24404761904761904,
+      "n": 26,
+      "asd": 12,
+      "td": 14,
+      "proportion": 0.46153846153846156
+    },
+    "SDSU": {
+      "auc": 0.2730263157894737,
+      "n": 27,
+      "asd": 8,
+      "td": 19,
+      "proportion": 0.2962962962962963
+    },
+    "STANFORD": {
+      "auc": 0.2724358974358974,
+      "n": 25,
+      "asd": 12,
+      "td": 13,
+      "proportion": 0.48
+    },
+    "TRINITY": {
+      "auc": 0.23157894736842105,
+      "n": 44,
+      "asd": 19,
+      "td": 25,
+      "proportion": 0.4318181818181818
+    },
+    "UCLA_1": {
+      "auc": 0.3613613613613614,
+      "n": 64,
+      "asd": 37,
+      "td": 27,
+      "proportion": 0.578125
+    },
+    "UCLA_2": {
+      "auc": 0.13636363636363635,
+      "n": 21,
+      "asd": 11,
+      "td": 10,
+      "proportion": 0.5238095238095238
+    },
+    "UM_1": {
+      "auc": 0.33399321266968324,
+      "n": 86,
+      "asd": 34,
+      "td": 52,
+      "proportion": 0.3953488372093023
+    },
+    "UM_2": {
+      "auc": 0.25824175824175827,
+      "n": 34,
+      "asd": 13,
+      "td": 21,
+      "proportion": 0.38235294117647056
+    },
+    "USM": {
+      "auc": 0.2926356589147287,
+      "n": 67,
+      "asd": 43,
+      "td": 24,
+      "proportion": 0.6417910447761194
+    },
+    "YALE": {
+      "auc": 0.1519138755980861,
+      "n": 41,
+      "asd": 22,
+      "td": 19,
+      "proportion": 0.5365853658536586
+    }
+  },
+  "source_files": {
+    "oof": "artifacts/transductive_main/seed666_fast_oof.npz",
+    "oof_sha256": "28480a12de230996745a789403e5869a0a49d93c9b1e18d8c34fa444e0315e4f",
+    "report": "seed666_fast_report.json",
+    "phenotype": "not redistributed; site/label map supplied in split_masks/SPLIT_MASKS.csv",
+    "phenotype_sha256": "009f01a89697113e5375ded4fbcff4c85e89a4daa6d13e63c21ae5d57dda0865"
+  }
+}

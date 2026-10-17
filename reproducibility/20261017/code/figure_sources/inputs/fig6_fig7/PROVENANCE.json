@@ -1,0 +1,13 @@
+{
+  "repository_commit": "a87348e3329c93b44b8aa9c55b0fb0e0d2f4f45c",
+  "recompute_inputs_sha256": "035daff6fbba4ca42f283a078e2e0c7c00dc6656dbc854ffadbb02bbd7b7c3e1",
+  "source": "Previously independently recomputed compact R3 inputs; summaries copied unchanged. The split manifest is copied from the same input bundle.",
+  "numeric_comparison": "primary, ci_lo, ci_hi versus original evidence: maximum absolute difference 0.0",
+  "files": {
+    "major1_site_level.csv": "eafd1daea97dbebb6b1c6426b4ca03110b5cb519e2ada52d57c4f98122d2dd80",
+    "major1_population_inference.json": "df43f5204abad9d7b5af3c0011a29e34a521e80e2e19a3fbbdbdad4d11fa1a7e",
+    "SYMMETRISED_VS_CANONICAL.csv": "b86fd82d1f91ce69678f6e2fdf4853529f0dbd9379a543cf85ec10d76d221365",
+    "SPLIT_AND_MASK_MANIFEST.json": "4e641ce999108ac79a07f29bc947711d1780d839168a9392393a017a1e3b5b52"
+  },
+  "matplotlib_version": "3.10.8"
+}

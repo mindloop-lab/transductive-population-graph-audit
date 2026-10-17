@@ -1,0 +1,57 @@
+{
+  "primary": "mean seedwise site-macro AUC difference, ON-OFF",
+  "point": -0.0036556804149039473,
+  "ci95": [
+    -0.017931911731382245,
+    0.011108946902865409
+  ],
+  "B": 5000,
+  "seed": 20261016,
+  "unit": "site",
+  "seedwise_endpoints": [
+    {
+      "arm": "OFF",
+      "seed": 666,
+      "pooled_auc": 0.5749612945642723,
+      "site_macro_auc": 0.605903766236393
+    },
+    {
+      "arm": "OFF",
+      "seed": 2025,
+      "pooled_auc": 0.5672520201056181,
+      "site_macro_auc": 0.5953410094852292
+    },
+    {
+      "arm": "OFF",
+      "seed": 2026,
+      "pooled_auc": 0.5534824287926025,
+      "site_macro_auc": 0.5401606461374804
+    },
+    {
+      "arm": "ON",
+      "seed": 666,
+      "pooled_auc": 0.5517062204407117,
+      "site_macro_auc": 0.6009375563101478
+    },
+    {
+      "arm": "ON",
+      "seed": 2025,
+      "pooled_auc": 0.5846853725265636,
+      "site_macro_auc": 0.6067614107097546
+    },
+    {
+      "arm": "ON",
+      "seed": 2026,
+      "pooled_auc": 0.5100050900299039,
+      "site_macro_auc": 0.5227394135944882
+    }
+  ],
+  "sites": 20,
+  "fixed_training_seeds": [
+    666,
+    2025,
+    2026
+  ],
+  "positive_site_seed_entries": 29,
+  "scope": "scoring-time insertion after the same source training procedure; not a training-time target-access contrast"
+}

@@ -1,0 +1,385 @@
+{
+  "script": "v4_recompute_site_bootstrap.py",
+  "directory_searched": "control_predictions/",
+  "scoring": "softmax(logits, axis=1)[:, 1]",
+  "bootstrap": {
+    "B": 10000,
+    "seed": 20261015,
+    "unit": "site",
+    "multiplicity": "preserved via concatenated indices"
+  },
+  "site_source": "SPLIT_MASKS.csv (subject_id -> site)",
+  "canonical_main_run": {
+    "pooled_oof_auc": 0.9396089160357151,
+    "archive": "split_masks/seed666_fast_oof.npz",
+    "sha256": "28480a12de230996745a789403e5869a0a49d93c9b1e18d8c34fa444e0315e4f"
+  },
+  "run_identity_warning": "Control Full pooled AUC 0.949842 differs from the supplied main-model 0.939609. Historical headline run identity is unresolved; do not splice these estimates.",
+  "contrasts": [
+    {
+      "contrast": "1  Full vs site-only",
+      "arm_a": {
+        "archive": "full_sex_site_s666_oof.npz",
+        "sha256": "98122253a4328904c70ac01286dcde51d92a51e42d08dbc7c98e505bd1091662",
+        "pooled_auc": 0.949841996988399,
+        "mean_fold_auc": 0.9488717537961688
+      },
+      "arm_b": {
+        "archive": "full_site_s666_oof.npz",
+        "sha256": "ff57ac8f60f9199d6c1bff034880adfc856d84d7aa70cc9af0ae8d82d38bd22e",
+        "pooled_auc": 0.9559765434455261,
+        "mean_fold_auc": 0.9571678211231696
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": -0.006134546457127077,
+      "ci_95_site_cluster": [
+        -0.023391386652639935,
+        0.009573529069127663
+      ],
+      "per_fold_delta": [
+        0.0010378827192527584,
+        0.0010604453870625141,
+        -0.014846235418875975,
+        -0.012234042553191382,
+        0.0430851063829788,
+        -0.005851063829787284,
+        -0.057446808510638325,
+        -0.007446808510638281,
+        -0.02393617021276595,
+        -0.006382978723404209
+      ],
+      "sites_positive": 8,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    },
+    {
+      "contrast": "2  Full vs sex-only",
+      "arm_a": {
+        "archive": "full_sex_site_s666_oof.npz",
+        "sha256": "98122253a4328904c70ac01286dcde51d92a51e42d08dbc7c98e505bd1091662",
+        "pooled_auc": 0.949841996988399,
+        "mean_fold_auc": 0.9488717537961688
+      },
+      "arm_b": {
+        "archive": "full_sex_s666_oof.npz",
+        "sha256": "32fbf98747b50955a4d167506f52c6f782090c48a2f55be430b8a5edef8fd036",
+        "pooled_auc": 0.5698871710037963,
+        "mean_fold_auc": 0.5820472800703954
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": 0.37995482598460273,
+      "ci_95_site_cluster": [
+        0.30978170703858154,
+        0.4240133036003728
+      ],
+      "per_fold_delta": [
+        0.35236118318629994,
+        0.42099681866383876,
+        0.2688229056203605,
+        0.4101063829787235,
+        0.46542553191489366,
+        0.43138297872340425,
+        0.31276595744680846,
+        0.31223404255319154,
+        0.2867021276595745,
+        0.4074468085106383
+      ],
+      "sites_positive": 17,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    },
+    {
+      "contrast": "3  Full vs random",
+      "arm_a": {
+        "archive": "full_sex_site_s666_oof.npz",
+        "sha256": "98122253a4328904c70ac01286dcde51d92a51e42d08dbc7c98e505bd1091662",
+        "pooled_auc": 0.949841996988399,
+        "mean_fold_auc": 0.9488717537961688
+      },
+      "arm_b": {
+        "archive": "full_random_s666_oof.npz",
+        "sha256": "87882bf926afb8c52bb234ed74e5c8cd0dcf05d2bb02231fb00abad99f0ace9c",
+        "pooled_auc": 0.580385357680643,
+        "mean_fold_auc": 0.5927232575979784
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": 0.36945663930775596,
+      "ci_95_site_cluster": [
+        0.30912103695575494,
+        0.4270322094384686
+      ],
+      "per_fold_delta": [
+        0.33834976647638815,
+        0.3462354188759279,
+        0.23806998939554602,
+        0.4,
+        0.37872340425531914,
+        0.5079787234042553,
+        0.3037234042553192,
+        0.3654255319148936,
+        0.3191489361702128,
+        0.3638297872340426
+      ],
+      "sites_positive": 18,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    },
+    {
+      "contrast": "3b Full(site) vs random",
+      "arm_a": {
+        "archive": "full_site_s666_oof.npz",
+        "sha256": "ff57ac8f60f9199d6c1bff034880adfc856d84d7aa70cc9af0ae8d82d38bd22e",
+        "pooled_auc": 0.9559765434455261,
+        "mean_fold_auc": 0.9571678211231696
+      },
+      "arm_b": {
+        "archive": "full_random_s666_oof.npz",
+        "sha256": "87882bf926afb8c52bb234ed74e5c8cd0dcf05d2bb02231fb00abad99f0ace9c",
+        "pooled_auc": 0.580385357680643,
+        "mean_fold_auc": 0.5927232575979784
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": 0.37559118576488304,
+      "ci_95_site_cluster": [
+        0.31956385636329265,
+        0.42879197865861157
+      ],
+      "per_fold_delta": [
+        0.3373118837571354,
+        0.3451749734888654,
+        0.252916224814422,
+        0.4122340425531914,
+        0.33563829787234034,
+        0.5138297872340426,
+        0.3611702127659575,
+        0.37287234042553186,
+        0.34308510638297873,
+        0.3702127659574468
+      ],
+      "sites_positive": 19,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    },
+    {
+      "contrast": "4  Full vs subject-only",
+      "arm_a": {
+        "archive": "full_sex_site_s666_oof.npz",
+        "sha256": "98122253a4328904c70ac01286dcde51d92a51e42d08dbc7c98e505bd1091662",
+        "pooled_auc": 0.949841996988399,
+        "mean_fold_auc": 0.9488717537961688
+      },
+      "arm_b": {
+        "archive": "subject_only_sex_site_s666_oof.npz",
+        "sha256": "c5bd3fa773aa1b8ca0f4310b72e0b81dc6a5ba99909def243220ef8b2a742862",
+        "pooled_auc": 0.5635352378528558,
+        "mean_fold_auc": 0.5657392658107895
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": 0.38630675913554324,
+      "ci_95_site_cluster": [
+        0.31220499049786493,
+        0.4327398238358985
+      ],
+      "per_fold_delta": [
+        0.32226258432797095,
+        0.4936373276776246,
+        0.33351007423117707,
+        0.35425531914893627,
+        0.3515957446808511,
+        0.3037234042553192,
+        0.33989361702127663,
+        0.4718085106382979,
+        0.3595744680851064,
+        0.5010638297872341
+      ],
+      "sites_positive": 17,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    },
+    {
+      "contrast": "5  Full vs within-site shuffle",
+      "arm_a": {
+        "archive": "full_sex_site_s666_oof.npz",
+        "sha256": "98122253a4328904c70ac01286dcde51d92a51e42d08dbc7c98e505bd1091662",
+        "pooled_auc": 0.949841996988399,
+        "mean_fold_auc": 0.9488717537961688
+      },
+      "arm_b": {
+        "archive": "mech_shuffle_site_site_s666_oof.npz",
+        "sha256": "47bda15ad170d1d3cc755b1093d0a5561ea5eb6776ec44cce6721d2401752de3",
+        "pooled_auc": 0.9609075099149541,
+        "mean_fold_auc": 0.9628722276121928
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": -0.01106551292655511,
+      "ci_95_site_cluster": [
+        -0.03237885661425101,
+        0.0033826212878742675
+      ],
+      "per_fold_delta": [
+        0.03269330565646078,
+        -0.0010604453870626251,
+        -0.05355249204665968,
+        -0.013297872340425454,
+        -0.006914893617021245,
+        0.006914893617021245,
+        -0.02765957446808509,
+        0.007446808510638281,
+        -0.046276595744680904,
+        -0.038297872340425476
+      ],
+      "sites_positive": 8,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    },
+    {
+      "contrast": "6  Full vs no train-test edges",
+      "arm_a": {
+        "archive": "full_sex_site_s666_oof.npz",
+        "sha256": "98122253a4328904c70ac01286dcde51d92a51e42d08dbc7c98e505bd1091662",
+        "pooled_auc": 0.949841996988399,
+        "mean_fold_auc": 0.9488717537961688
+      },
+      "arm_b": {
+        "archive": "mech_real_site_s666_maskTT_oof.npz",
+        "sha256": "47c1a13673092282e85ebf28fd45ac9fadf3001f73eeb04dd2b23de4567fbd5f",
+        "pooled_auc": 0.5656772921040911,
+        "mean_fold_auc": 0.5697005933981634
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": 0.3841647048843079,
+      "ci_95_site_cluster": [
+        0.343395459786452,
+        0.43724084909660244
+      ],
+      "per_fold_delta": [
+        0.37259989621172807,
+        0.31654294803817606,
+        0.19512195121951215,
+        0.399468085106383,
+        0.4287234042553192,
+        0.4106382978723404,
+        0.2808510638297872,
+        0.3228723404255319,
+        0.4856382978723404,
+        0.5792553191489362
+      ],
+      "sites_positive": 19,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    },
+    {
+      "contrast": "7  Site-only vs no train-test edges",
+      "arm_a": {
+        "archive": "full_site_s666_oof.npz",
+        "sha256": "ff57ac8f60f9199d6c1bff034880adfc856d84d7aa70cc9af0ae8d82d38bd22e",
+        "pooled_auc": 0.9559765434455261,
+        "mean_fold_auc": 0.9571678211231696
+      },
+      "arm_b": {
+        "archive": "mech_real_site_s666_maskTT_oof.npz",
+        "sha256": "47c1a13673092282e85ebf28fd45ac9fadf3001f73eeb04dd2b23de4567fbd5f",
+        "pooled_auc": 0.5656772921040911,
+        "mean_fold_auc": 0.5697005933981634
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": 0.39029925134143495,
+      "ci_95_site_cluster": [
+        0.3525175881327065,
+        0.43725028656811127
+      ],
+      "per_fold_delta": [
+        0.3715620134924753,
+        0.31548250265111355,
+        0.20996818663838812,
+        0.41170212765957437,
+        0.3856382978723404,
+        0.4164893617021277,
+        0.3382978723404255,
+        0.3303191489361702,
+        0.5095744680851064,
+        0.5856382978723405
+      ],
+      "sites_positive": 19,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    },
+    {
+      "contrast": "8  Site-only vs rewiring",
+      "arm_a": {
+        "archive": "full_site_s666_oof.npz",
+        "sha256": "ff57ac8f60f9199d6c1bff034880adfc856d84d7aa70cc9af0ae8d82d38bd22e",
+        "pooled_auc": 0.9559765434455261,
+        "mean_fold_auc": 0.9571678211231696
+      },
+      "arm_b": {
+        "archive": "mech_real_site_s666_rewire_oof.npz",
+        "sha256": "bf0cb3b42dd468bf59e46faf2984ef5363d6d1be8e2e60f96cc9d9049d720dc1",
+        "pooled_auc": 0.5980732115967848,
+        "mean_fold_auc": 0.6040351639177817
+      },
+      "status": "RECOMPUTED",
+      "pooled_delta_auc": 0.35790333184874124,
+      "ci_95_site_cluster": [
+        0.3060734206314385,
+        0.41897846863540117
+      ],
+      "per_fold_delta": [
+        0.31499740529320186,
+        0.3144220572640509,
+        0.4024390243902439,
+        0.3968085106382978,
+        0.3569148936170212,
+        0.3313829787234043,
+        0.3808510638297873,
+        0.3228723404255319,
+        0.29734042553191486,
+        0.4132978723404255
+      ],
+      "sites_positive": 18,
+      "sites_total": 20,
+      "resampling_unit": "site (joined by subject id from SPLIT_MASKS.csv); multiplicity preserved"
+    }
+  ],
+  "arm_aucs_differing_from_canonical": [
+    {
+      "contrast": "1  Full vs site-only",
+      "arm_a_auc": 0.949841996988399
+    },
+    {
+      "contrast": "2  Full vs sex-only",
+      "arm_a_auc": 0.949841996988399
+    },
+    {
+      "contrast": "3  Full vs random",
+      "arm_a_auc": 0.949841996988399
+    },
+    {
+      "contrast": "3b Full(site) vs random",
+      "arm_a_auc": 0.9559765434455261
+    },
+    {
+      "contrast": "4  Full vs subject-only",
+      "arm_a_auc": 0.949841996988399
+    },
+    {
+      "contrast": "5  Full vs within-site shuffle",
+      "arm_a_auc": 0.949841996988399
+    },
+    {
+      "contrast": "6  Full vs no train-test edges",
+      "arm_a_auc": 0.949841996988399
+    },
+    {
+      "contrast": "7  Site-only vs no train-test edges",
+      "arm_a_auc": 0.9559765434455261
+    },
+    {
+      "contrast": "8  Site-only vs rewiring",
+      "arm_a_auc": 0.9559765434455261
+    }
+  ],
+  "recomputed": 9,
+  "unverified": 0,
+  "site_prior_baseline_reference": 0.5056228924094929
+}

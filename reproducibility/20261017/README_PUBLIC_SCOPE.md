@@ -33,3 +33,9 @@ No Apache/MIT/data license is newly assigned by this packaging operation. Do not
 publish this tree as "fully reproducible" or publish the original private ZIP as a
 release asset. If authorized for publication, make the repository README and journal
 availability statements agree with these actual input-access limits.
+
+## Version
+
+This layer is released as **v1.2.1**. The earlier v1.2.0 draft release was never published and is not
+replaced by this one. A version-specific DOI is minted by the archive at release time and is not quoted here
+before it exists; the previous version DOI describes the earlier scope only.

@@ -2,7 +2,7 @@
   "title": "Code and frozen results for: Reliable Evaluation of Transductive Population Graph Neural Networks for Multisite Autism fMRI",
   "description": "Reproducibility software for multisite population-graph evaluation. Version 1.2.0 adds manifest-validated R3 statistics and compact test-prediction inputs for 528 directed, 528 bidirectional and 270 support-sampling fits. The positive paired effect is implementation-conditional and does not survive bidirectional edges. Withdrawn per-site significance tests are not recomputed. Original cohort release data remain available. No primary imaging data or end-to-end R3 training-input rebuild is supplied.",
   "upload_type": "software",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "access_right": "open",
   "creators": [
     {
@@ -50,12 +50,6 @@
       "relation": "isVersionOf",
       "identifier": "10.5281/zenodo.22748743",
       "scheme": "doi"
-    },
-    {
-      "relation": "isSupplementTo",
-      "identifier": "https://github.com/mindloop-lab/transductive-population-graph-audit/tree/v1.2.0",
-      "scheme": "url",
-      "resource_type": "software"
     },
     {
       "relation": "isSupplementTo",

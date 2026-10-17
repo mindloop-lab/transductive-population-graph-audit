@@ -3,7 +3,7 @@ message: "If you use this software, please cite this software release and the ac
 title: "Code and frozen results for: Reliable Evaluation of Transductive Population Graph Neural Networks for Multisite Autism fMRI"
 type: software
 version: 1.2.1
-date-released: "2026-10-14"
+# date-released: set at actual release
 license: Apache-2.0
 repository-code: "https://github.com/mindloop-lab/transductive-population-graph-audit"
 doi: "10.5281/zenodo.22748743"

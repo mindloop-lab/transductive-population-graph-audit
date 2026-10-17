@@ -39,3 +39,15 @@ availability statements agree with these actual input-access limits.
 This layer is released as **v1.2.1**. The earlier v1.2.0 draft release was never published and is not
 replaced by this one. A version-specific DOI is minted by the archive at release time and is not quoted here
 before it exists; the previous version DOI describes the earlier scope only.
+
+## Counts and authorisation
+
+- Original candidate allowlist: **31** files.
+- Published in this subpackage: **21** source files (+ scope notes and manifests).
+- Excluded for portability: **10** scripts that embedded machine-local paths (listed with their original
+  hashes in EXCLUDED_FROM_PUBLIC_TREE.md); their private originals are unchanged.
+- Separately private and not part of any public layer: **21** subject-level or collection files.
+
+Author confirmation (2026-10-17): code and documentation may be published, and the derived aggregate
+summaries were verified as publishable. The project licence is not extended to third-party material. The
+authorisation concerns the 31 candidates; the 10 excluded files are excluded rather than unauthorised.

@@ -16,5 +16,19 @@
   "zip_copied": 0,
   "rights_status": "PENDING_AUTHOR_SOURCE_AND_LICENSE_CONFIRMATION",
   "public_release_executed": false,
-  "actual_target_repository_comparison": "NOT_RUN_HERE; target clone is on user server"
+  "actual_target_repository_comparison": "NOT_RUN_HERE; target clone is on user server",
+  "counts": {
+    "original_candidates": 31,
+    "current_public_sources": 21,
+    "excluded_for_portability": 10,
+    "separately_private": 21
+  },
+  "authorization": {
+    "scope": "31 files listed in the original candidate allowlist",
+    "basis": "author confirmation in the task thread on 2026-10-17: code and documentation may be published; derived aggregate summaries verified as publishable; the project licence is not extended to third-party material",
+    "effect": "the 21 files remaining in this public layer are AUTHORIZED for publication; the 10 files excluded for portability are excluded, not unauthorized",
+    "private_items_unchanged": 21
+  },
+  "line_ending_note": "SYMMETRISED_VS_CANONICAL.csv and major1_site_level.csv differ from the originals only in line endings (CRLF -> LF) as normalised by git; content is unchanged",
+  "path_revision_note": "no file in this layer claims byte-identity with a private original where a path or line-ending normalisation occurred; both hashes are recorded per file"
 }

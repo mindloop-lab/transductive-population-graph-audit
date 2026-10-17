@@ -1,0 +1,20 @@
+{
+  "source_private_zip_sha256": "6031321894a529beb48e7c918c951d3783769f5ab9583b58cca6c0b3a495a1c1",
+  "copied_source_files": 31,
+  "source_files_byte_identical": true,
+  "source_extension_counts": {
+    ".json": 8,
+    ".csv": 4,
+    ".md": 1,
+    ".py": 15,
+    ".txt": 2,
+    ".sh": 1
+  },
+  "excluded_subject_level_files": 21,
+  "excluded_mixed_containers": 2,
+  "npz_copied": 0,
+  "zip_copied": 0,
+  "rights_status": "PENDING_AUTHOR_SOURCE_AND_LICENSE_CONFIRMATION",
+  "public_release_executed": false,
+  "actual_target_repository_comparison": "NOT_RUN_HERE; target clone is on user server"
+}

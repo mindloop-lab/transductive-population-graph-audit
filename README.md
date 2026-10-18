@@ -1,16 +1,36 @@
 # Transductive Population-Graph Audit — R3 release candidate
 
 Code and derived evidence for **Reliable Evaluation of Transductive Population Graph Neural Networks
-for Multisite Autism fMRI**. The proposed software version is **1.2.0**; it is not published yet.
+for Multisite Autism fMRI**. The proposed software version is **1.2.1**; it is not published yet.
 
 ## Results and interpretation
 
-- Cohort out-of-fold AUC is about 0.94; unseen-site AUC is 0.522 (C-PAC) / 0.532 (NIAK).
+- The supplied canonical main-model OOF archive gives AUC 0.939609. The historical headline
+  near 0.9405 is not identified by proximity to that value. Historical LOSO values
+  0.522 (C-PAC) / 0.532 (NIAK) are retained as historical reports, not independently
+  verified endpoints for the current submission.
 - Under the directed paired protocol, the equal-site mean ON−OFF AUC effect is +0.252
   [0.184, 0.322], with 17/18 sites positive.
 - With bidirectional edges the same endpoint is −0.003 [−0.020, 0.015], with 8/18 sites positive.
   The positive paired effect is implementation-conditional, not a robust causal supervision-location effect.
 - Support draws change the ON supervised subject set, not the graph. The three-site sensitivity is descriptive.
+
+## Added public layer for the current submission
+
+See [scope and input-access limits](reproducibility/20261017/README_PUBLIC_SCOPE.md).
+The original approved candidate list had 31 source files; 21 remain in this layer and
+10 non-portable scripts are excluded with their original hashes recorded. The layer
+contains code and aggregate summaries, not the full individual-level recomputation inputs.
+The 21 separately private subject-level or collection files are a different file set.
+Existing public artifacts elsewhere in this repository remain unchanged; the new-layer
+exclusions are not a statement that the entire repository contains no subject-level records.
+
+In the fixed LOSO implementation, the mean seedwise site-macro AUC is 0.576813 with
+population-edge access and 0.580468 without that access. The paired difference is
+−0.003656 (95% site-bootstrap interval [−0.017932, 0.011109]). This is a scoring-time
+comparison after the same source training procedure, not an equivalence result,
+complete isolation, or a training-time target-access experiment. E1 is not reinstated
+and the split-deviating E2 experiments are not adopted as accepted evidence.
 
 ## Three reproducibility levels
 
@@ -73,6 +93,6 @@ paths in those notes have been redacted. They are not executable input contracts
 
 Software is Apache-2.0. Project concept DOI: https://doi.org/10.5281/zenodo.22748743.
 Version 1.1.0 DOI: https://doi.org/10.5281/zenodo.22892320 (does not include R3 additions).
-The proposed 1.2.0 version DOI has not been minted. `CITATION.cff` currently uses the concept DOI;
+The proposed 1.2.1 version DOI has not been minted. `CITATION.cff` currently uses the concept DOI;
 replace the version DOI field only after the new archive is published. The preprint is
 https://doi.org/10.64898/2026.09.15.751719. Publishing a release may trigger the configured Zenodo integration.

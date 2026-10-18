@@ -1,53 +1,49 @@
-# Paper M: code and aggregate-result candidate
+# Paper M: code and aggregate-result public layer
 
-STATUS: review candidate; publication rights have not been approved.
+STATUS: author-authorized public layer for proposed release v1.2.1; not yet released.
 
-This tree contains exactly 31 byte-identical code/aggregate source files selected
-by explicit relative path and SHA256 from the reviewed private candidate. It adds
-three scope/inventory documents and a final hash manifest. It includes no NPZ,
-no individual-score CSV, no individual membership JSON and no nested manuscript ZIP.
-The four included CSVs are seed/site-level summaries. JSON is not inherently public:
-the subject-membership manifest was deliberately excluded.
+The original author-approved candidate allowlist contained 31 source files. This
+subpackage includes 21 source files, five scope/provenance/inventory documents and
+one hash manifest (27 files total). Ten non-portable scripts were excluded; their
+original hashes and reasons are recorded in EXCLUDED_FROM_PUBLIC_TREE.md and .json.
+Private originals are unchanged. The four included CSVs contain seed/site summaries.
+No NPZ, individual-score CSV, individual-membership JSON or manuscript ZIP is included
+in this added layer. Existing public repository artifacts outside it are unchanged.
 
 ## Reproducibility limits
 
-This public candidate ALONE cannot run the complete individual-level numerical
-recomputation. code/run_recompute.sh and code/evidence_20261017/recompute.py retain
-their original paths and behavior, but require excluded inputs. Their presence is
-not a promise of a self-contained executable public release.
+This layer alone cannot perform the complete individual-level numerical recomputation.
+The retained code/run_recompute.sh and code/evidence_20261017/recompute.py require
+excluded participant predictions, main/control OOF archives, empirical-prior tables,
+split masks and membership sets. No author-mediated access arrangement is asserted.
+The evidence README inventories the full private numerical bundle; it does not mean
+all listed inputs are included here. Some retained historical figure utilities also
+require assets or helper scripts not included in this subset. Their presence is not
+a claim that every retained script is a standalone executable entry point.
 
-Missing categories include E3 participant predictions, main/control OOF archives,
-site-prior per-participant tables, split masks and membership sets. No mechanism
-for obtaining those inputs, release permission or author-mediated access is asserted.
-The original evidence README describes the full private numerical bundle and must
-be read as an input inventory, not as proof all inputs are included in this subset.
+No E1 reinstatement, E2 rerun, new training or new clinical claim is introduced.
+E3 is a scoring-time population-edge access comparison after the same source training
+procedure; it does not establish equivalence or complete subject isolation.
 
-Some historical plotting scripts have external dependencies. The E3 original driver
-is not a portable training entry point. No new fit, new model claim, clinical claim,
-E1 reinstatement or E2 rerun is introduced here.
+## Authorization and provenance
 
-## Publication review
+The recorded author confirmation of 2026-10-17 covers publication of code/documentation
+and the verified aggregate summaries in the original 31-file candidate list. The 21
+retained source files are authorized; the ten others are excluded for portability,
+not for lack of authorization. SOURCE_ALLOWLIST.csv distinguishes the historical
+permission status from the current authorization status and records original and
+public-copy hashes. Two aggregate CSVs underwent CRLF-to-LF normalization; they are
+not byte-identical to their private originals. No project licence is extended to
+third-party material.
 
-Verify source ownership and applicable licenses for the actual 31-path inventory.
-No Apache/MIT/data license is newly assigned by this packaging operation. Do not
-publish this tree as "fully reproducible" or publish the original private ZIP as a
-release asset. If authorized for publication, make the repository README and journal
-availability statements agree with these actual input-access limits.
+The separately private 21 subject-level or collection files, two mixed submission ZIPs
+and internal audit history are not release assets. The public layer is not advertised
+as fully reproducible. Manuscript availability statements must match these limits.
 
-## Version
+## Version and archive
 
-This layer is released as **v1.2.1**. The earlier v1.2.0 draft release was never published and is not
-replaced by this one. A version-specific DOI is minted by the archive at release time and is not quoted here
-before it exists; the previous version DOI describes the earlier scope only.
-
-## Counts and authorisation
-
-- Original candidate allowlist: **31** files.
-- Published in this subpackage: **21** source files (+ scope notes and manifests).
-- Excluded for portability: **10** scripts that embedded machine-local paths (listed with their original
-  hashes in EXCLUDED_FROM_PUBLIC_TREE.md); their private originals are unchanged.
-- Separately private and not part of any public layer: **21** subject-level or collection files.
-
-Author confirmation (2026-10-17): code and documentation may be published, and the derived aggregate
-summaries were verified as publishable. The project licence is not extended to third-party material. The
-authorisation concerns the 31 candidates; the 10 excluded files are excluded rather than unauthorised.
+The proposed release is v1.2.1. The existing v1.2.0 draft is left untouched.
+No v1.2.1 release or version-specific DOI is asserted before publication. The older
+version DOI represents its stated historical scope. A GitHub/Zenodo repository
+snapshot can include existing files outside this layer; this inventory describes
+only reproducibility/20261017/.

@@ -1,0 +1,10 @@
+{
+  "per_seed_site_macro": {
+    "666": 0.6009375563101479,
+    "2025": 0.6067614107097546,
+    "2026": 0.5227394135944881
+  },
+  "mean_over_seeds": 0.5768127935381302,
+  "per_site_over_seeds_pooled": 0.5710291044032114,
+  "explanation": "0.5768 is the average of per-seed site-macro values; 0.5710 pools the three seeds inside each site before computing the site AUC, which mixes seeds and is not the same endpoint. The report keeps 0.5768 as the cross-seed macro endpoint and withdraws 0.5710."
+}

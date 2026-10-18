@@ -1,0 +1,41 @@
+{
+  "protocol": "paired experiment (88 feasible site-fold cells) - SEPARATE optional baseline",
+  "arm_supervision": {
+    "ON": "C+S (same-site support supervised -> site-specific prior available)",
+    "OFF": "C+R (both parts from other sites -> zero target-site training subjects -> pre-declared fallback to the fold-wide optimization-training prior)"
+  },
+  "per_arm": {
+    "ON": {
+      "n": 836,
+      "pooled_auc": 0.5808985857192135,
+      "fallbacks": 0,
+      "distinct_scores": 35,
+      "site_counts_with_zero_training": 0
+    },
+    "OFF": {
+      "n": 836,
+      "pooled_auc": 0.4402782568701851,
+      "fallbacks": 836,
+      "distinct_scores": 17,
+      "site_counts_with_zero_training": 836
+    }
+  },
+  "off_arm_ci_95_site_resample": [
+    0.4045975419406935,
+    0.4861660269542765
+  ],
+  "n_prediction_rows": 1672,
+  "independent_subjects": 836,
+  "note": "The two arms are not independent evidence: the number of independent subjects is 836, and the ON/OFF rows duplicate the same subjects.",
+  "source_files": {
+    "manifest": "SPLIT_AND_MASK_MANIFEST.json (sha256 b3c33d851b75479c)",
+    "labels_from": "cell010_KKI_f0_OFF_s2025_oof.npz",
+    "labels_sha256": "e1e22ba6be19217604d324dd263aad78d4764409ef47e61e75c23883e2f9fb1c"
+  },
+  "constant_within_cell": {
+    "verified": true,
+    "cells": 176,
+    "correct_interpretation": "a constant inside a cell gives AUC 0.5 within that cell, but a site's constants can differ across folds, so it does NOT follow that every site's AUC is 0.5. Measured: OFF site-macro AUC = 0.5000 (all 18 sites at 0.5) while ON site-macro AUC = 0.4763."
+  },
+  "placement": "supplement (per the review): the ON/OFF paired baselines belong in the supplement, with the pooled nature of the summary stated explicitly"
+}

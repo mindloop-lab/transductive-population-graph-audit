@@ -1,0 +1,513 @@
+{
+  "seeds": {
+    "split": 20261011,
+    "support_sampling": 20261012,
+    "training": [
+      666,
+      2025,
+      2026
+    ]
+  },
+  "cells": [
+    {
+      "site": "CALTECH",
+      "fold": 0,
+      "feasible": false
+    },
+    {
+      "site": "CALTECH",
+      "fold": 1,
+      "feasible": false
+    },
+    {
+      "site": "CALTECH",
+      "fold": 2,
+      "feasible": false
+    },
+    {
+      "site": "CALTECH",
+      "fold": 3,
+      "feasible": false
+    },
+    {
+      "site": "CALTECH",
+      "fold": 4,
+      "feasible": false
+    },
+    {
+      "site": "CMU",
+      "fold": 0,
+      "feasible": false
+    },
+    {
+      "site": "CMU",
+      "fold": 1,
+      "feasible": false
+    },
+    {
+      "site": "CMU",
+      "fold": 2,
+      "feasible": false
+    },
+    {
+      "site": "CMU",
+      "fold": 3,
+      "feasible": false
+    },
+    {
+      "site": "CMU",
+      "fold": 4,
+      "feasible": false
+    },
+    {
+      "site": "KKI",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "KKI",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "KKI",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "KKI",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "KKI",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_1",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_1",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_1",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_1",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_1",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_2",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_2",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_2",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_2",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "LEUVEN_2",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "MAX_MUN",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "MAX_MUN",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "MAX_MUN",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "MAX_MUN",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "MAX_MUN",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "NYU",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "NYU",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "NYU",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "NYU",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "NYU",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "OHSU",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "OHSU",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "OHSU",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "OHSU",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "OHSU",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "OLIN",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "OLIN",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "OLIN",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "OLIN",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "OLIN",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "PITT",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "PITT",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "PITT",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "PITT",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "PITT",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "SBL",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "SBL",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "SBL",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "SBL",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "SBL",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "SDSU",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "SDSU",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "SDSU",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "SDSU",
+      "fold": 3,
+      "feasible": false
+    },
+    {
+      "site": "SDSU",
+      "fold": 4,
+      "feasible": false
+    },
+    {
+      "site": "STANFORD",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "STANFORD",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "STANFORD",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "STANFORD",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "STANFORD",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "TRINITY",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "TRINITY",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "TRINITY",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "TRINITY",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "TRINITY",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_1",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_1",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_1",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_1",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_1",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_2",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_2",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_2",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_2",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "UCLA_2",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "UM_1",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "UM_1",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "UM_1",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "UM_1",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "UM_1",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "UM_2",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "UM_2",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "UM_2",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "UM_2",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "UM_2",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "USM",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "USM",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "USM",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "USM",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "USM",
+      "fold": 4,
+      "feasible": true
+    },
+    {
+      "site": "YALE",
+      "fold": 0,
+      "feasible": true
+    },
+    {
+      "site": "YALE",
+      "fold": 1,
+      "feasible": true
+    },
+    {
+      "site": "YALE",
+      "fold": 2,
+      "feasible": true
+    },
+    {
+      "site": "YALE",
+      "fold": 3,
+      "feasible": true
+    },
+    {
+      "site": "YALE",
+      "fold": 4,
+      "feasible": true
+    }
+  ]
+}
